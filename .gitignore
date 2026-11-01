@@ -1,0 +1,6 @@
+formal/.lake/
+formal/Probe*.lean
+*.olean
+*.ilean
+*.trace
+__pycache__/
