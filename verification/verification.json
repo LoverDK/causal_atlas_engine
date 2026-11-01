@@ -1,0 +1,167 @@
+{
+  "verified_at": "2026-11-01T17:39:09.753737+08:00",
+  "lean_version": "Lean (version 4.34.0-rc1, x86_64-w64-windows-gnu, commit 3447a668783dbce1a8fdb97101dd067687b2b418, Release)",
+  "theorem_count": 32,
+  "theorems": [
+    "Atlas.affine_signal_reproduction",
+    "Atlas.weighted_error_bound",
+    "Atlas.interval_inflation",
+    "Atlas.full_error_decomposition",
+    "Atlas.Asymptotics.fixed_iid_clt",
+    "CausalAtlas.estimatedGreedy_step",
+    "CausalAtlas.contraction_bound",
+    "CausalAtlas.geometric_le_exp",
+    "CausalAtlas.weakSubmodular_progress",
+    "CausalAtlas.progress_to_contraction",
+    "CausalAtlas.bridge_bound_of_progress",
+    "CausalAtlas.weakSubmodular_greedy_bound",
+    "Atlas.weighted_expectation",
+    "Atlas.weighted_unbiased",
+    "Atlas.weighted_subgaussian",
+    "Atlas.subgaussian_two_sided",
+    "Atlas.weighted_variance",
+    "CausalAtlas.two_point_absolute",
+    "CausalAtlas.two_point_square_identity",
+    "CausalAtlas.gapFunction_lipschitz",
+    "CausalAtlas.neg_gapFunction_lipschitz",
+    "CausalAtlas.gapFunction_eq_zero",
+    "CausalAtlas.unsupported_target_lower_bound",
+    "Atlas.Selection.selected_failure_subset",
+    "Atlas.Selection.family_failure_subset",
+    "Atlas.Selection.conflict_subset_failure",
+    "Atlas.Selection.family_failure_le",
+    "Atlas.Selection.selected_failure_le",
+    "Atlas.Selection.conflict_probability_le",
+    "Atlas.Selection.simultaneous_coverage",
+    "CausalAtlas.supportObjective_continuous",
+    "CausalAtlas.support_minimizer_exists"
+  ],
+  "kernel_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Algebra.olean",
+        "Atlas\\Algebra.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Asymptotics.olean",
+        "Atlas\\Asymptotics.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Bridge.olean",
+        "Atlas\\Bridge.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Estimation.olean",
+        "Atlas\\Estimation.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\LowerBounds.olean",
+        "Atlas\\LowerBounds.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Selection.olean",
+        "Atlas\\Selection.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Support.olean",
+        "Atlas\\Support.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake/build/lib/lean/Atlas.olean",
+        "Atlas.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomAudit.lean"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "Atlas/Algebra.lean": "92bb9673a3f008e07e96552c7687a11231bfe8a1ce567939e40055e603fff254",
+    "Atlas/Asymptotics.lean": "38ec3cbca25505ce21c0c41ace0c9774136ed78f9d94f0370a118a31fcdf38ad",
+    "Atlas/Bridge.lean": "c34b00cc040215b3fc166fc57c4462f47308eaaa6234621f805e089373d2ed78",
+    "Atlas/Estimation.lean": "71d33b8d682deae81e6f92d25edcbd0bc79ca0891dbf81d07be6d5292be70885",
+    "Atlas/LowerBounds.lean": "cf0a1063e21ea35cd7d79ec3e154cd244e5ed5899c9f640ac2f5f302eccf267f",
+    "Atlas/Selection.lean": "0980e4ce66433d1e52674770de2ff3b413a6464154aff5e57dfec9b46b9eeb1d",
+    "Atlas/Support.lean": "16feb077c1b9ca50d456c12983fb7552427f95abe1adb9cc68aac84f09cb2ca1",
+    "Atlas.lean": "dd016b5f8079c118def6335b7eeaae3f16c4f2ae430b5df5c0865a5ca1ceb7c4",
+    "AxiomAudit.lean": "3b28ff73bce643a05b17bf6ff20d9f6e955534a8c17b57add94e6c181a851b71",
+    "lakefile.lean": "4bf9e0555bd234d920128022a3150e19a6933c28a43605460ed304b2d69e8c35",
+    "lake-manifest.json": "8de571983d0d4a858123ea0328b489d31b230ce43eda9cac7a063fa4436881d7",
+    "lean-toolchain": "cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf"
+  },
+  "scope": "Only the exact Lean statements listed here are verified. See docs/proofs/README.md for manuscript coverage and remaining gaps."
+}
