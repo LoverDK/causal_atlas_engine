@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-03T15:09:48.351583+08:00",
+  "verified_at": "2026-11-03T15:12:30.047980+08:00",
   "scope": "All six Markdown documents; local math-aware Markdown rendering with KaTeX 0.16.22 in headless Microsoft Edge. This is not a claim about every third-party Markdown viewer.",
   "viewport": {
     "width": 1440,
@@ -56,7 +56,7 @@
       "maxFormulaHeight": 147.828125,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "8f3bf4d80791b86bef27426985a5eeef5d2328c35f9bf9609b5f8ca54a92f90e"
+      "source_sha256": "9cb79b28e5c3d17d0938eee3182ce854b6871412bb6f94539ee397cb5fb7ac3c"
     },
     {
       "file": "docs/proofs/02-support-and-lower-bounds.md",
@@ -90,7 +90,7 @@
       "maxFormulaHeight": 104.625,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "a833a2fb6003c6a6aebd9612dad59ba7791af7c6de9419b351711c12da89e47e"
+      "source_sha256": "6513ac9aaa074113148e3a01ed884dd13b77a484eb778f9791437d13d0d18f60"
     },
     {
       "file": "docs/proofs/04-formal-connections.md",

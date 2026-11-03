@@ -7,13 +7,15 @@
 - 候选集 $`V`$ 有限；预算为整数 $`B`$，且 $`1\le B\le |V|`$。
 - $`F:2^V\to\mathbb R`$ 满足 $`F(\varnothing)=0`$，且关于集合包含单调。
 - $`0<\gamma\le1`$，$`\varepsilon\ge0`$。
-- 对所需的 $`S,T\subseteq V`$，弱次模比条件采用明确约定
-  $$
-  \gamma\bigl(F(S\cup T)-F(S)\bigr)\le\sum_{v\in T\setminus S}\bigl(F(S\cup\{v\})-F(S)\bigr).
-  $$
-  本证明只需 $`|S|<B`$、$`|T|\le B`$ 的情形。
+- 对所需的 $`S,T\subseteq V`$，满足下述弱次模比条件；本证明只需 $`|S|<B`$、$`|T|\le B`$ 的情形。
 - $`\Delta(v\mid S)=F(S\cup\{v\})-F(S)`$，且 $`|\widehat\Delta(v\mid S)-\Delta(v\mid S)|\le\varepsilon`$ 对所需的所有状态和可选元素同时成立。
 - 从 $`S_0=\varnothing`$ 开始，$`u_t\in\arg\max_{v\in V\setminus S_t}\widehat\Delta(v\mid S_t)`$，$`S_{t+1}=S_t\cup\{u_t\}`$，$`0\le t<B`$。
+
+这里弱次模比条件采用明确约定
+
+$$
+\gamma\bigl(F(S\cup T)-F(S)\bigr)\le\sum_{v\in T\setminus S}\bigl(F(S\cup\{v\})-F(S)\bigr).
+$$
 
 由于候选集有限且 $`|S_t|=t<B\le|V|`$，上述最大值确实取得。最优集合 $`S^{\ast}\in\arg\max_{|S|\le B}F(S)`$ 也存在；记 $`\mathrm{OPT}=F(S^{\ast})\ge0`$。
 
