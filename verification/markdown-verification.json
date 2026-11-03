@@ -1,0 +1,135 @@
+{
+  "verified_at": "2026-11-03T15:06:27.144602+08:00",
+  "scope": "All six Markdown documents; local math-aware Markdown rendering with KaTeX 0.16.22 in headless Microsoft Edge. This is not a claim about every third-party Markdown viewer.",
+  "viewport": {
+    "width": 1440,
+    "height": 1080
+  },
+  "document_count": 6,
+  "formula_count": 552,
+  "display_formula_count": 135,
+  "manual_visual_review": [
+    "Statistical proof section 5.1C-R: target subscripts, full curvature identity, interval and numbered equations render horizontally without fallback code.",
+    "New connections document: randomized risk and studentization formulas render correctly."
+  ],
+  "changes": [
+    "Use braced LaTeX target-star notation without raw Markdown asterisks.",
+    "Keep each display formula body on one source line; aligned environments retain explicit row separators.",
+    "Convert 267 mathematical inline code spans to mathematical notation.",
+    "Prevent raw vertical bars from splitting Markdown table cells.",
+    "Retain code formatting for actual Lean declarations, commands, versions and file paths."
+  ],
+  "files": [
+    {
+      "file": "README.md",
+      "formulas": 0,
+      "errors": [],
+      "tables": [],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 0,
+      "maxFormulaHeight": 0,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "d4e500835e191bdc01253842549dbdecdd41782c690fc40525b5b4f48698a481"
+    },
+    {
+      "file": "docs/proofs/01-statistical-proofs.md",
+      "formulas": 336,
+      "errors": [],
+      "tables": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 69,
+      "maxFormulaHeight": 147.828125,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "54ad755f996f26e1db3843253e8ed6943d23196420f756b3914535773c6194f8"
+    },
+    {
+      "file": "docs/proofs/02-support-and-lower-bounds.md",
+      "formulas": 24,
+      "errors": [],
+      "tables": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 24,
+      "maxFormulaHeight": 169.59375,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "c1fc928b94ed8e28da4d218860438af5db5e35dfb8089e25cda2ed91eef1cba9"
+    },
+    {
+      "file": "docs/proofs/03-bridge-selection.md",
+      "formulas": 74,
+      "errors": [],
+      "tables": [],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 16,
+      "maxFormulaHeight": 104.625,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "f98ed40b64ad145f954e3a7455ea7ef2a82407a5d9e6ece72a80174a60efd79b"
+    },
+    {
+      "file": "docs/proofs/04-formal-connections.md",
+      "formulas": 103,
+      "errors": [],
+      "tables": [],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 23,
+      "maxFormulaHeight": 75.828125,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "c4b635fc2947ccfb8cab6e3d31d8f80fcb4aeac2afaacc979aae0f445b049af7"
+    },
+    {
+      "file": "docs/proofs/README.md",
+      "formulas": 15,
+      "errors": [],
+      "tables": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 3,
+      "maxFormulaHeight": 76.59375,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "50e6a4f78e3b88fe8917f9754ab1999fce0d41596e5e3fe599e49e3082898214"
+    }
+  ]
+}

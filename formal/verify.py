@@ -10,7 +10,28 @@ import sys
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT.parent / 'verification'
 OUT.mkdir(exist_ok=True)
-modules = sorted((ROOT / 'Atlas').glob('*.lean'))
+sources = {f'Atlas.{p.stem}': p for p in sorted((ROOT / 'Atlas').glob('*.lean'))}
+modules = []
+visiting = set()
+visited = set()
+
+def visit(module):
+    if module in visited:
+        return
+    if module in visiting:
+        raise SystemExit(f'Circular local import: {module}')
+    visiting.add(module)
+    p = sources[module]
+    for dependency in re.findall(r'^import\s+(Atlas\.\w+)', p.read_text(encoding='utf-8-sig'), re.M):
+        if dependency not in sources:
+            raise SystemExit(f'Missing local import: {dependency}')
+        visit(dependency)
+    visiting.remove(module)
+    visited.add(module)
+    modules.append(p)
+
+for module in sources:
+    visit(module)
 names = []
 for p in modules:
     text = p.read_text(encoding='utf-8-sig')
@@ -49,7 +70,7 @@ for group in re.findall(r'depends on axioms:\s*\[([^\]]*)\]', audit, re.S):
 allowed = {'propext', 'Classical.choice', 'Quot.sound'}
 if not dependencies <= allowed:
     raise SystemExit(f'Unexpected proof dependencies: {dependencies - allowed}')
-inputs = modules + [ROOT / 'Atlas.lean', ROOT / 'AxiomAudit.lean', ROOT / 'lakefile.lean', ROOT / 'lake-manifest.json', ROOT / 'lean-toolchain']
+inputs = modules + [ROOT / 'Atlas.lean', ROOT / 'AxiomAudit.lean', ROOT / 'lakefile.lean', ROOT / 'lake-manifest.json', ROOT / 'lean-toolchain', ROOT / 'verify.py']
 report = {
     'verified_at': datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(),
     'lean_version': version, 'theorem_count': len(names), 'theorems': names,

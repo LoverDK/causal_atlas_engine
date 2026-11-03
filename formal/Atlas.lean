@@ -1,7 +1,13 @@
 import Atlas.Algebra
 import Atlas.Asymptotics
 import Atlas.Bridge
+import Atlas.BridgeAlgorithm
 import Atlas.Estimation
-import Atlas.LowerBounds
 import Atlas.Selection
+import Atlas.Confidence
+import Atlas.Extraction
+import Atlas.InverseVariance
+import Atlas.LowerBounds
+import Atlas.Regression
+import Atlas.Risk
 import Atlas.Support

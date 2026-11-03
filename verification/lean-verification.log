@@ -7,11 +7,23 @@ $ lake env lean -o .lake\build\lib\lean\Atlas\Asymptotics.olean Atlas\Asymptotic
 
 $ lake env lean -o .lake\build\lib\lean\Atlas\Bridge.olean Atlas\Bridge.lean
 
+$ lake env lean -o .lake\build\lib\lean\Atlas\BridgeAlgorithm.olean Atlas\BridgeAlgorithm.lean
+
 $ lake env lean -o .lake\build\lib\lean\Atlas\Estimation.olean Atlas\Estimation.lean
+
+$ lake env lean -o .lake\build\lib\lean\Atlas\Selection.olean Atlas\Selection.lean
+
+$ lake env lean -o .lake\build\lib\lean\Atlas\Confidence.olean Atlas\Confidence.lean
+
+$ lake env lean -o .lake\build\lib\lean\Atlas\Extraction.olean Atlas\Extraction.lean
+
+$ lake env lean -o .lake\build\lib\lean\Atlas\InverseVariance.olean Atlas\InverseVariance.lean
 
 $ lake env lean -o .lake\build\lib\lean\Atlas\LowerBounds.olean Atlas\LowerBounds.lean
 
-$ lake env lean -o .lake\build\lib\lean\Atlas\Selection.olean Atlas\Selection.lean
+$ lake env lean -o .lake\build\lib\lean\Atlas\Regression.olean Atlas\Regression.lean
+
+$ lake env lean -o .lake\build\lib\lean\Atlas\Risk.olean Atlas\Risk.lean
 
 $ lake env lean -o .lake\build\lib\lean\Atlas\Support.olean Atlas\Support.lean
 
@@ -23,6 +35,14 @@ $ lake env lean AxiomAudit.lean
 'Atlas.interval_inflation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.full_error_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.Asymptotics.fixed_iid_clt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.add_negligible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.mul_consistent_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.continuousAt_inMeasure_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.inverse_sqrt_consistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.studentized_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.dominated_inMeasure_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.weighted_variance_relative_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Asymptotics.variance_consistent_of_weighted_errors' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.estimatedGreedy_step' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.contraction_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.geometric_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -30,17 +50,24 @@ $ lake env lean AxiomAudit.lean
 'CausalAtlas.progress_to_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.bridge_bound_of_progress' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.weakSubmodular_greedy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.finite_argmax_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.finiteArgmax_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.finiteArgmax_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.nextChoice_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.nextChoice_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.nextChoice_approximate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.greedySets_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.greedySets_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.constructed_greedy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.greedySets_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.greedySets_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.budget_optimum_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.BridgeAlgorithm.constructed_greedy_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.weighted_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.weighted_unbiased' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.weighted_subgaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.subgaussian_two_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.weighted_variance' depends on axioms: [propext, Classical.choice, Quot.sound]
-'CausalAtlas.two_point_absolute' depends on axioms: [propext, Classical.choice, Quot.sound]
-'CausalAtlas.two_point_square_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
-'CausalAtlas.gapFunction_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
-'CausalAtlas.neg_gapFunction_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
-'CausalAtlas.gapFunction_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
-'CausalAtlas.unsupported_target_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.Selection.selected_failure_subset' does not depend on any axioms
 'Atlas.Selection.family_failure_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.Selection.conflict_subset_failure' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -48,5 +75,48 @@ $ lake env lean AxiomAudit.lean
 'Atlas.Selection.selected_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.Selection.conflict_probability_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Atlas.Selection.simultaneous_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.radius_calibration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.confidence_tail_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.confidence_tail_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.confidence_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.inflated_failure_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.certified_interval_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.family_certified_interval_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.selected_certified_interval_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.complete_remainder_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Confidence.weighted_complete_interval_failure_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.feature_signal_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.record_extraction_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.weighted_extraction_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.observed_design_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.full_extraction_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.signal_reproduction_of_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.weighted_feature_perturbation_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.support_residual_perturbation_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Extraction.support_residual_signal_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.scalar_square_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.precisionSum_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.weight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.weight_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.completion_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.objective_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.objective_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.InverseVariance.objective_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.two_point_absolute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.two_point_square_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.gapFunction_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.neg_gapFunction_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.gapFunction_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CausalAtlas.unsupported_target_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.calibration_left_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.calibration_weights_reproduce' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.combined_features_reproduce' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.calibration_prediction_eq_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.combined_signal_reproduce' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.dotProduct_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.integrable_dotProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Regression.calibrated_estimator_unbiased' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Risk.randomized_two_point_risk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Atlas.Risk.randomized_unsupported_target_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.supportObjective_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
 'CausalAtlas.support_minimizer_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
