@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-03T15:06:27.144602+08:00",
+  "verified_at": "2026-11-03T15:09:48.351583+08:00",
   "scope": "All six Markdown documents; local math-aware Markdown rendering with KaTeX 0.16.22 in headless Microsoft Edge. This is not a claim about every third-party Markdown viewer.",
   "viewport": {
     "width": 1440,
@@ -16,6 +16,8 @@
     "Use braced LaTeX target-star notation without raw Markdown asterisks.",
     "Keep each display formula body on one source line; aligned environments retain explicit row separators.",
     "Convert 267 mathematical inline code spans to mathematical notation.",
+    "Use the protected dollar/backtick inline delimiters documented by GitHub.",
+    "Replace tag macros with ordinary math text equation labels to avoid unsupported native MathML mlabeledtr layouts observed on the actual GitHub page.",
     "Prevent raw vertical bars from splitting Markdown table cells.",
     "Retain code formatting for actual Lean declarations, commands, versions and file paths."
   ],
@@ -54,7 +56,7 @@
       "maxFormulaHeight": 147.828125,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "54ad755f996f26e1db3843253e8ed6943d23196420f756b3914535773c6194f8"
+      "source_sha256": "8f3bf4d80791b86bef27426985a5eeef5d2328c35f9bf9609b5f8ca54a92f90e"
     },
     {
       "file": "docs/proofs/02-support-and-lower-bounds.md",
@@ -88,7 +90,7 @@
       "maxFormulaHeight": 104.625,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "f98ed40b64ad145f954e3a7455ea7ef2a82407a5d9e6ece72a80174a60efd79b"
+      "source_sha256": "a833a2fb6003c6a6aebd9612dad59ba7791af7c6de9419b351711c12da89e47e"
     },
     {
       "file": "docs/proofs/04-formal-connections.md",
@@ -101,7 +103,7 @@
       "maxFormulaHeight": 75.828125,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "c4b635fc2947ccfb8cab6e3d31d8f80fcb4aeac2afaacc979aae0f445b049af7"
+      "source_sha256": "b31476798e7183ae6833ea0aa735ae0197e21e0bdf0bebb8f05976bc26cf584b"
     },
     {
       "file": "docs/proofs/README.md",
@@ -129,7 +131,7 @@
       "maxFormulaHeight": 76.59375,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "50e6a4f78e3b88fe8917f9754ab1999fce0d41596e5e3fe599e49e3082898214"
+      "source_sha256": "4d9ec6922c3f5df79a642f3ae6e5887f24fdcb1cf90a1119dd1adc76ebfd5ba8"
     }
   ]
 }
