@@ -21,29 +21,29 @@
 
 以下各有限样本命题先固定一个报告。设 $`C`$ 与 $`J`$ 为不相交的有限索引集，$`C`$ 非空；$`x_i=(1,m_i^{\top})^{\top}\in\mathbb R^{p+1}`$，目标特征为 $`x_{\ast}`$。令
 
-$$
+```math
 \alpha_i\ge0,\qquad \sum_{i\in C}\alpha_i=1, \qquad r=x_{\ast}-\sum_{i\in C}\alpha_i x_i.
-$$
+```
 
 $`X`$ 是以 $`x_j^{\top}, j\in J`$ 为行的矩阵，$`W`$ 为对角正定权重矩阵。定义
 
-$$
+```math
 G=X^\top W X,\qquad B=G^{-1}X^\top W, \qquad h=B^\top r. \qquad\text{(S1)}
-$$
+```
 
 假设 $`G`$ 正定，且 $`\lambda_{\min}(G)\ge\lambda>0`$、$`\lVert W\rVert_{\mathrm{op}}\le w_{\max}`$。$`B`$ 是校准回归的线性算子，$`h`$ 是校准集对最终报告的实际影响权重。注意 $`h_j`$ 可以为负。
 
 令 $`\mathcal G`$ 为条件信息。集合、特征、权重、目标及下文出现的真实均值和尺度都对 $`\mathcal G`$ 可测。理想研究效应记录满足
 
-$$
+```math
 Y_i^0=\tau_i+\varepsilon_i,\qquad \mathbb E[\varepsilon_i\mid\mathcal G]=0, \qquad i\in C\cup J. \qquad\text{(S2)}
-$$
+```
 
 分别记
 
-$$
-v_i=\operatorname{Var}(\varepsilon_i\mid\mathcal G), \qquad \mathbb E[e^{t\varepsilon_i}\mid\mathcal G] \le e^{t^2s_i^2/2},\quad t\in\mathbb R. \qquad\text{(S3)}
-$$
+```math
+v_i=\mathrm{Var}(\varepsilon_i\mid\mathcal G), \qquad \mathbb E[e^{t\varepsilon_i}\mid\mathcal G] \le e^{t^2s_i^2/2},\quad t\in\mathbb R. \qquad\text{(S3)}
+```
 
 $`v_i`$ 是真实条件方差，$`s_i^2`$ 是有效 MGF proxy；一般只有 $`v_i\le s_i^2`$，不能默认相等。为应用独立乘积尾界，明确要求整个有限族 $`(\varepsilon _i)_{i\in C\cup J}`$ 在给定 $`\mathcal G`$ 后相互独立。仅要求两组相互独立，不能替代组内条件独立。
 
@@ -57,51 +57,51 @@ $`v_i`$ 是真实条件方差，$`s_i^2`$ 是有效 MGF proxy；一般只有 $`v
 
 设有限族 $`(\varepsilon _i)`$ 条件独立并满足 (S2)–(S3)，$`a_i`$ 为 $`\mathcal G`$ 可测实数。定义
 
-$$
+```math
 Z=\sum_i a_i\varepsilon_i, \qquad S^2=\sum_i a_i^2s_i^2.
-$$
+```
 
 则对所有实数 $`t`$，
 
-$$
+```math
 \mathbb E[e^{tZ}\mid\mathcal G]\le e^{t^2S^2/2}. \qquad\text{(A1)}
-$$
+```
 
 在 $`S^2>0`$ 时，对所有 $`u>0`$ 有
 
-$$
+```math
 \mathbb P(|Z|\ge u\mid\mathcal G) \le 2\exp\{-u^2/(2S^2)\}. \qquad\text{(A2)}
-$$
+```
 
 因此对 $`t>0`$，
 
-$$
+```math
 \mathbb P(|Z|>\sqrt{2S^2t}\mid\mathcal G)\le 2e^{-t}. \qquad\text{(A3)}
-$$
+```
 
 若 $`S^2=0`$，则 $`Z=0`$ 条件几乎处处，(A3) 仍成立。若右边超过 1，可以取它与 1 的最小值。
 
 **证明。** 固定一个满足假设的条件分布。独立性与 MGF 条件给出
 
-$$
+```math
 \mathbb E e^{tZ} =\prod_i\mathbb E e^{ta_i\varepsilon_i} \le\prod_i e^{t^2a_i^2s_i^2/2} =e^{t^2S^2/2}.
-$$
+```
 
 对任意 $`\lambda >0`$，Markov 不等式给出
 
-$$
+```math
 \mathbb P(Z\ge u) \le e^{-\lambda u}\mathbb E e^{\lambda Z} \le e^{-\lambda u+\lambda^2S^2/2}.
-$$
+```
 
 $`S^2>0`$ 时取 $`\lambda =u/S^2`$，得到上尾 $`\exp\{-u^2/(2S^2)\}`$；对 $`-Z`$ 同样推导下尾，再取并集即得 (A2)。代入 $`u=\sqrt{2S^2t}`$ 得到 (A3)。若 $`S^2=0`$，上式对任意 $`\lambda >0`$ 给出 $`\mathbb P(Z\ge u)\le e^{-\lambda u}`$，令 $`\lambda \to \infty`$；下尾同理。对正有理数 $`u`$ 取可数并集即知 $`Z=0`$ 几乎处处。所有论证在条件分布下成立，故得到条件形式。证毕。
 
 ### 不能将真实方差直接放进 (A3)
 
-取 $`Q\sim \operatorname{Bernoulli}(0.01)`$，$`Z=Q-0.01`$。其均值为 0，方差为 $`0.0099`$，且因有界而具有有效 sub-Gaussian proxy。然而若错误地把 proxy 换为真实方差并取 $`t=6`$，则
+取 $`Q\sim \mathrm{Bernoulli}(0.01)`$，$`Z=Q-0.01`$。其均值为 0，方差为 $`0.0099`$，且因有界而具有有效 sub-Gaussian proxy。然而若错误地把 proxy 换为真实方差并取 $`t=6`$，则
 
-$$
+```math
 \mathbb P(|Z|>\sqrt{2(0.0099)6})=0.01 >2e^{-6}\approx0.004958.
-$$
+```
 
 因此“任何真实方差上界都可用于 sub-Gaussian 尾界”一般错误。若原稿将 $`\sigma _i^2`$ 同时假设为真实方差和有效 MGF proxy，那么这是额外的、较强的分布假设，必须明说；不能把它当作普通 sub-Gaussian 性的推论。
 
@@ -109,9 +109,9 @@ $$
 
 令 $`U`$ 在三维二元向量空间 $`\mathbb F_2^3`$ 上均匀分布，并对七个非零向量 $`a`$ 定义 $`\varepsilon _a=(-1)^{a\cdot U}`$。这七个变量均为零均值 Rademacher，二阶方差为 1，彼此不相关，单个变量的 MGF proxy 为 1，但并非相互独立。取 $`Z=(1/7)\sum _a \varepsilon _a`$，则 $`Z=1`$ 的概率为 $`1/8`$，$`Z=-1/7`$ 的概率为 $`7/8`$，故真实方差为 $`1/7`$。若错误使用独立和尾界，取 $`t=3`$ 会得到
 
-$$
+```math
 1/8=\mathbb P(|Z|>\sqrt{6/7}) \le2e^{-3}\approx0.09957<1/8,
-$$
+```
 
 矛盾。因而 Theorem 5.1 的指数尾界必须具有全部误差条件独立，或直接的联合 MGF 假设。
 
@@ -121,86 +121,86 @@ $$
 
 采用第 2 节条件，并在 **$`C\cup J`$ 与目标上使用同一个参数** $`\beta`$，满足
 
-$$
+```math
 \tau_i=x_i^\top\beta\quad(i\in C\cup J), \qquad \tau_{\ast}=x_{\ast}^\top\beta. \qquad\text{(T1)}
-$$
+```
 
 定义
 
-$$
+```math
 \widehat\beta=BY_J^0, \quad \widehat\theta_{\rm raw}=\sum_{i\in C}\alpha_iY_i^0, \quad \widehat\theta_{\rm db} =\sum_{i\in C}\alpha_iY_i^0+r^\top\widehat\beta.
-$$
+```
 
 那么：
 
 1. $`\mathbb E[\widehat\theta_{\mathrm{raw}}-\tau_{\ast}\mid\mathcal G]=-r^{\top}\beta`$，而 $`\mathbb E[\widehat\theta_{\mathrm{db}}\mid\mathcal G]=\tau_{\ast}`$。
 2. 精确条件方差为
 
-$$
+```math
 V=\sum_{i\in C}\alpha_i^2v_i+\sum_{j\in J}h_j^2v_j =\alpha^\top\Sigma_C\alpha+ r^\top G^{-1}X^\top W\Sigma_JWXG^{-1}r, \qquad\text{(T2)}
-$$
+```
 
-其中 $`\Sigma_C=\operatorname{diag}(v_i)`$、$`\Sigma_J=\operatorname{diag}(v_j)`$。
+其中 $`\Sigma_C=\mathrm{diag}(v_i)`$、$`\Sigma_J=\mathrm{diag}(v_j)`$。
 
 3. 有效 MGF proxy 为
 
-$$
+```math
 S^2=\sum_{i\in C}\alpha_i^2s_i^2+\sum_{j\in J}h_j^2s_j^2. \qquad\text{(T3)}
-$$
+```
 
 对 $`\eta \in (0,1)`$，区间
 
-$$
+```math
 \left[\widehat\theta_{\rm db} \pm\sqrt{2S^2\log(2/\eta)}\right] \qquad\text{(T4)}
-$$
+```
 
 具有至少 $`1-\eta`$ 的条件覆盖概率。
 
 4. 若 $`v_i\le \bar v`$，则
 
-$$
+```math
 V\le\bar v\{\|\alpha\|_2^2+w_{\max}\lambda^{-1}\|r\|_2^2\}. \qquad\text{(T5)}
-$$
+```
 
 若 $`s_i^2\le \bar s^2`$，则同样有
 
-$$
+```math
 S^2\le\bar s^2\{\|\alpha\|_2^2+w_{\max}\lambda^{-1}\|r\|_2^2\}. \qquad\text{(T6)}
-$$
+```
 
 **证明。** 因 $`G`$ 可逆，$`BX=I`$。代入 $`Y_J^0=X\beta +\varepsilon _J`$ 得
 
-$$
+```math
 \widehat\beta=\beta+B\varepsilon_J.
-$$
+```
 
 因此
 
-$$
+```math
 \widehat\theta_{\rm raw}-\tau_{\ast} =-r^\top\beta+\sum_{i\in C}\alpha_i\varepsilon_i,
-$$
+```
 
 以及核心恒等式
 
-$$
+```math
 \widehat\theta_{\rm db}-\tau_{\ast} =\sum_{i\in C}\alpha_i\varepsilon_i +r^\top B\varepsilon_J =\sum_{i\in C}\alpha_i\varepsilon_i +\sum_{j\in J}h_j\varepsilon_j. \qquad\text{(T7)}
-$$
+```
 
 取条件期望，使用零均值，证明结论 1。条件独立使交叉协方差为零；对 (T7) 求方差即得 (T2)。把两组权重合并并应用 A.1R，得到 proxy (T3) 及区间 (T4)。
 
 证明范数界时，由 $`W^2\preceq w_{\mathrm{max}} W`$ 可得
 
-$$
+```math
 \begin{aligned} \|h\|_2^2 &=r^\top G^{-1}X^\top W^2XG^{-1}r\\ &\le w_{\max}r^\top G^{-1}X^\top WXG^{-1}r\\ &=w_{\max}r^\top G^{-1}r \le w_{\max}\lambda^{-1}\|r\|_2^2. \end{aligned}
-$$
+```
 
 最后分别用 $`v_i\le \bar v`$ 与 $`s_i^2\le \bar s^2`$ 控制 (T2)、(T3)。证毕。
 
 **较弱独立性条件。** 无偏性只需要相应条件均值；方差式只需要对应条件协方差结构；指数尾界需要更强的联合 MGF 控制。这三层不能混在一个未区分的“独立校准”表述中。若重叠研究引起相关误差，可直接假设
 
-$$
+```math
 \mathbb E[e^{t^\top\varepsilon}\mid\mathcal G] \le e^{t^\top Kt/2}\quad(t\in\mathbb R^{|C|+|J|}),
-$$
+```
 
 其中 $`K`$ 为有效半正定 proxy 矩阵。合并权重 $`w=(\alpha ,h)`$ 后使用 $`S^2=w^{\top}Kw`$；实际方差为 $`w^{\top}\Sigma w`$。这可替代全体条件独立，但 $`K`$ 的有效性仍需依据。
 
@@ -218,35 +218,35 @@ $$
 
 把 (T1) 改为
 
-$$
+```math
 \tau_i=x_i^\top\beta+\zeta_i\quad(i\in C\cup J), \qquad \tau_{\ast}=x_{\ast}^\top\beta+\zeta_{\ast}.
-$$
+```
 
 定义完整偏差
 
-$$
+```math
 b_{\rm curv} =\sum_{i\in C}\alpha_i\zeta_i +\sum_{j\in J}h_j\zeta_j-\zeta_{\ast}. \qquad\text{(C1)}
-$$
+```
 
 若有对 $`\mathcal G`$ 可测、非负的有效界 $`B_{\mathrm{curv}}\ge \vert b_{\mathrm{curv}}\vert`$，则
 
-$$
+```math
 \left[\widehat\theta_{\rm db} \pm\{\sqrt{2S^2\log(2/\eta)}+B_{\rm curv}\}\right] \qquad\text{(C2)}
-$$
+```
 
 具有至少 $`1-\eta`$ 的条件覆盖概率。
 
 **证明。** 校准回归分解为
 
-$$
+```math
 \widehat\beta=\beta+B\zeta_J+B\varepsilon_J.
-$$
+```
 
 代入得到
 
-$$
+```math
 \widehat\theta_{\rm db}-\tau_{\ast} =b_{\rm curv}+\sum_{i\in C}\alpha_i\varepsilon_i +\sum_{j\in J}h_j\varepsilon_j. \qquad\text{(C3)}
-$$
+```
 
 A.1R 以概率至少 $`1-\eta`$ 控制后两个和的绝对值，三角不等式再加上 $`\vert b_{\mathrm{curv}}\vert \le B_{\mathrm{curv}}`$ 即得 (C2)。证毕。
 
@@ -256,9 +256,9 @@ A.1R 以概率至少 $`1-\eta`$ 控制后两个和的绝对值，三角不等式
 - 若只掌握 $`\lVert \zeta _J\rVert _2\le K_J`$，则可取 $`B_{\mathrm{curv}}=H_q\omega _C(\alpha )+\lVert h\rVert _2K_J`$，再用 (T5) 前的 $`\lVert h\rVert _2`$ 界。
 - 若效应函数 $`f`$ 在包含所有相关机制及连接线段的凸域上二阶可微，$`\lVert\nabla^2f\rVert_{\mathrm{op}}\le H`$，在目标处取 Taylor 展开，则 $`\zeta _{\ast}=0`$，$`\vert \zeta _i\vert \le (H/2)\lVert m_i-m_{\ast}\rVert ^2`$。因此
 
-$$
+```math
 B_{\rm curv} =\frac H2\left\{ \sum_{i\in C}\alpha_i\|m_i-m_{\ast}\|^2 +\sum_{j\in J}|h_j|\|m_j-m_{\ast}\|^2\right\} \qquad\text{(C4)}
-$$
+```
 
 是有效界。Taylor 余项来自
 $`\zeta_i=\int_0^1(1-t)(m_i-m_{\ast})^{\top}\nabla^2 f(m_{\ast}+t(m_i-m_{\ast}))(m_i-m_{\ast})\,dt`$。
@@ -271,9 +271,9 @@ $`\zeta_i=\int_0^1(1-t)(m_i-m_{\ast})^{\top}\nabla^2 f(m_{\ast}+t(m_i-m_{\ast}))
 
 若 $`\lVert \widehat m_i-m_i\rVert \le u_i`$、$`\lVert \widehat m_{\ast}-m_{\ast}\rVert \le u_{\ast}`$，则
 
-$$
+```math
 \left|(r-\widehat r)^\top\beta\right| \le\|\beta_m\|\left(u_{\ast}+\sum_{i\in C}\alpha_i u_i\right). \qquad\text{(E1)}
-$$
+```
 
 证明是 $`r-\widehat r=(x_{\ast}-\widehat x_{\ast})-\sum _C\alpha _i(x_i-\widehat x_i)`$；截距坐标均为零，对机制坐标使用 Cauchy–Schwarz 和三角不等式即可。
 
@@ -291,67 +291,67 @@ $`\vert (Y_i+\widehat b_i)-\tau _i\vert \le \widehat v_i+\vert Y_i-\tau _i\vert`
 
 保留理想记录 $`Y_i^0=\tau _i+\varepsilon _i`$，实际输入定义为
 
-$$
+```math
 \widetilde Y_i=Y_i^0+\delta_i, \qquad \widehat x_i=(1,\widehat m_i^\top)^\top.
-$$
+```
 
 在抽取校准事件 $`E_{\mathrm{ext}}`$ 上，所有参与本次推断的来源及目标同时满足
 
-$$
+```math
 |\delta_i|\le v_i^{\rm ext},\qquad \|\widehat m_i-m_i\|\le u_i, \qquad \|\widehat m_{\ast}-m_{\ast}\|\le u_{\ast}. \qquad\text{(E2)}
-$$
+```
 
 这里 $`v_i^{ext}`$ 是抽取残差幅度，**不是**第 2 节真实条件方差 $`v_i`$。任何已做偏差校正后的剩余误差都包含在 $`\delta _i`$ 内。抽取校准事件不需要与研究误差独立。
 
 令实际算法计算
 
-$$
+```math
 \widehat G=\widehat X^\top W\widehat X,\quad \widehat B=\widehat G^{-1}\widehat X^\top W,\quad \widehat r=\widehat x_{\ast}-\sum_{i\in C}\alpha_i\widehat x_i, \quad \widehat h=\widehat B^\top\widehat r,
-$$
+```
 
 并要求实际矩阵 $`\widehat G`$ 可逆，而非仅真实矩阵 $`G`$ 可逆。记
 
-$$
+```math
 \widetilde\theta =\sum_{i\in C}\alpha_i\widetilde Y_i +\widehat r^\top\widehat B\widetilde Y_J =\sum_{i\in C}\alpha_i\widetilde Y_i +\sum_{j\in J}\widehat h_j\widetilde Y_j. \qquad\text{(E3)}
-$$
+```
 
 实际特征、$`\alpha`$、$`W`$ 和 $`\widehat h`$ 必须对条件信息 $`\mathcal G`$ 可测，并且理想误差 $`\varepsilon _i`$ 在该信息下仍满足 (S2)–(S3)。这项要求可能需要独立的抽取/审计数据；它不会仅由确定了 $`\widehat h`$ 自动成立。
 
 在一个额外事件 $`E_\beta`$ 上令 $`\lVert \beta _m\rVert \le \widehat L`$。定义
 
-$$
+```math
 \begin{aligned} B_{\rm ext} ={}&\widehat L\left(u_{\ast}+\sum_{i\in C}\alpha_i u_i +\sum_{j\in J}|\widehat h_j|u_j\right)\\ &+\sum_{i\in C}\alpha_i v_i^{\rm ext} +\sum_{j\in J}|\widehat h_j|v_j^{\rm ext}. \end{aligned} \qquad\text{(E4)}
-$$
+```
 
 令 $`\widehat B_{\mathrm{curv}}`$ 为完整曲率偏差
 
-$$
+```math
 \left|\sum_{i\in C}\alpha_i\zeta_i +\sum_{j\in J}\widehat h_j\zeta_j-\zeta_{\ast}\right| \qquad\text{(E5)}
-$$
+```
 
 的有效上界，并定义实际权重的噪声 proxy
 
-$$
+```math
 \widehat S^2 =\sum_{i\in C}\alpha_i^2s_i^2 +\sum_{j\in J}\widehat h_j^2s_j^2. \qquad\text{(E6)}
-$$
+```
 
 那么在校准事件上，
 
-$$
+```math
 \left|\widetilde\theta-\tau_{\ast} -\sum_{i\in C}\alpha_i\varepsilon_i -\sum_{j\in J}\widehat h_j\varepsilon_j\right| \le B_{\rm ext}+\widehat B_{\rm curv}. \qquad\text{(E7)}
-$$
+```
 
 **证明。** 由 $`\widehat B\widehat X=I`$，
 
-$$
+```math
 \sum_{i\in C}\alpha_i\widehat x_i +\widehat X^\top\widehat h =\sum_{i\in C}\alpha_i\widehat x_i+\widehat r =\widehat x_{\ast}. \qquad\text{(E8)}
-$$
+```
 
 将 $`\tau _i=x_i^{\top}\beta +\zeta _i`$ 与实际输入分解代入 (E3)，并减去 $`\tau _{\ast}`$。仿射部分等于
 
-$$
+```math
 \begin{aligned} &\left(\sum_C\alpha_i x_i+\sum_J\widehat h_jx_j-x_{\ast}\right)^\top\beta\\ &=\left\{\sum_C\alpha_i(x_i-\widehat x_i) +\sum_J\widehat h_j(x_j-\widehat x_j) +(\widehat x_{\ast}-x_{\ast})\right\}^\top\beta, \end{aligned} \qquad\text{(E9)}
-$$
+```
 
 其中第二个等式由 (E8) 得出。差向量的截距为零，故在 $`E_{\mathrm{ext}}\cap E_\beta`$ 上，(E9) 的绝对值不超过 (E4) 第一行。抽取效应误差和为 $`\sum _C\alpha _i\delta _i+\sum _J\widehat h_j\delta _j`$，其绝对值不超过 (E4) 第二行。余下确定性项恰为 (E5)，随机研究误差恰为 (E7) 中被减去的两项。三角不等式给出结论。证毕。
 
@@ -364,15 +364,15 @@ $`\rho =\rho _{\mathrm{ext}}+\rho _\beta +\rho _{\mathrm{curv}}+\rho _{\mathrm{p
 
 在统计 MGF 条件有效时，区间
 
-$$
+```math
 \widetilde I_\eta= \left[\widetilde\theta\pm \left\{\sqrt{2\widehat S^2\log(2/\eta)} +B_{\rm ext}+\widehat B_{\rm curv}\right\}\right] \qquad\text{(E10)}
-$$
+```
 
 满足
 
-$$
+```math
 \mathbb P(\tau_{\ast}\notin\widetilde I_\eta)\le\eta+\rho. \qquad\text{(E11)}
-$$
+```
 
 证明：在 $`E_{\mathrm{cert}}`$ 上，区间失效蕴含研究误差和超过其 A.1R 半径，故
 $`\mathbb P(\mathrm{miss})\le\mathbb P(\text{noise tail})+\mathbb P(E_{\mathrm{cert}}^c)\le\eta+\rho`$。**不能直接在 $`E_{\mathrm{ext}}`$ 上重新条件化并假定独立性仍在**；这里使用事件包含关系避开了这个问题。
@@ -385,27 +385,27 @@ $`\mathbb P(\mathrm{miss})\le\mathbb P(\text{noise tail})+\mathbb P(E_{\mathrm{c
 
 设候选报告集 $`\mathcal R`$ 为固定有限集，或为 $`\mathcal G`$ 可测的有限集；后一情况必须在给定 $`\mathcal G`$ 后保留每个报告的条件尾界。令错误预算 $`\eta _R\ge 0`$ 为 $`\mathcal G`$ 可测，几乎处处满足
 
-$$
+```math
 \sum_{R\in\mathcal R}\eta_R\le\alpha. \qquad\text{(M1)}
-$$
+```
 
 对 $`\eta _R=0`$ 的报告，采用整条实线作为区间，或另行证明零失效概率；不能直接计算 $`\log (2/0)`$。假设每个报告 $`R`$ 的误差分解、区间与第 6 节一致，并且全部必要证书在共同事件 $`E_{\mathrm{cert}}`$ 上同时成立，$`\mathbb P(E_{\mathrm{cert}}^c)\le \rho`$。则
 
-$$
+```math
 \mathbb P\{\forall R\in\mathcal R:\tau_R\in I_R\} \ge1-\alpha-\rho. \qquad\text{(M2)}
-$$
+```
 
 因此对任何依据完整数据选择的可测报告 $`\widehat R\in \mathcal R`$ 及任何可测标签规则，
 
-$$
+```math
 \mathbb P\{\widehat\ell={\rm link},\, \tau_{\widehat R}\notin I_{\widehat R}\} \le\alpha+\rho. \qquad\text{(M3)}
-$$
+```
 
 **证明。** 令 $`A_R=\{\tau_R\notin I_R\}`$，$`T_R`$ 为该报告研究误差和超过统计半径的事件。在 $`E_{\mathrm{cert}}`$ 上，由 (E7) 有 $`A_R\subseteq T_R`$。条件并集界给出
 
-$$
+```math
 \mathbb P\left(\bigcup_{R\in\mathcal R}T_R\mid\mathcal G\right) \le\sum_{R\in\mathcal R}\eta_R\le\alpha.
-$$
+```
 
 对条件概率取期望，且
 $`\bigcup _R A_R\subseteq (\bigcup _R T_R)\cup E_{\mathrm{cert}}^c`$，得 (M2)。在所有区间同时覆盖的事件上，不论如何选择 $`\widehat R`$，其区间都覆盖；故 (M3) 是 (M2) 的直接结果。跨报告误差或区间可以相关，无需报告之间独立。证毕。
@@ -417,9 +417,9 @@ $`\mathbb P(\mathrm{miss}\mid\mathrm{label}=\mathrm{link})\le\alpha+\rho`$；若
 
 令有 $`M`$ 个互相独立的标准正态统计量，各自对应同一真值 0 的普通 $`1-\alpha`$ 区间。先查看全部统计量，再选取绝对值最大的一个，把它作为“唯一候选报告”，并为这个单元素集合分配全部预算 $`\alpha`$。最终候选集确实有限，甚至大小为 1，但覆盖率为
 
-$$
+```math
 \mathbb P\left(\max_{1\le j\le M}|Z_j|\le z_{1-\alpha/2}\right) =(1-\alpha)^M,
-$$
+```
 
 远低于 $`1-\alpha`$。修复方法是预先对完整 $`M`$ 个候选分配错误预算，再允许选择；或用与推断数据独立的数据构造候选族。将筛选后结果写入 $`\mathcal G`$ 不能恢复筛选前的正态条件分布。
 
@@ -433,9 +433,9 @@ $$
 
 **情形一：共同目标一致性检验。** 在“这些报告确实对应相同目标且全部识别、抽取和统计假设成立”的联合零假设下，定义 $`D=\{\exists R,S:I_R\cap I_S=\varnothing\}`$。由 (M2)，
 
-$$
+```math
 \mathbb P(D)\le\alpha+\rho. \qquad\text{(M4)}
-$$
+```
 
 若观察到冲突，可以拒绝这一联合假设并要求审计；不能仅凭不交区间判断具体是哪篇研究错误、哪个假设失效，或声称已经解决冲突。
 
@@ -447,15 +447,15 @@ $$
 
 令 $`d=\inf_{\alpha\in\Delta_C}\lVert m_{\ast}-\sum_C\alpha_i m_i\rVert`$，$`\widehat d`$ 为抽取版本。在几何校准事件上，对每个 $`\alpha`$，逆三角不等式给出
 
-$$
+```math
 \left|\left\|m_{\ast}-\sum_C\alpha_im_i\right\| -\left\|\widehat m_{\ast}-\sum_C\alpha_i\widehat m_i\right\|\right| \le u_{\ast}+\sum_C\alpha_iu_i \le u_{\ast}+\max_{i\in C}u_i.
-$$
+```
 
 对两个方向分别取下确界可得
 
-$$
+```math
 |d-\widehat d|\le u_{\ast}+\max_{i\in C}u_i. \qquad\text{(M5)}
-$$
+```
 
 所以 $`\widehat d>\delta`$ 本身不足以证明 $`d>\delta`$。要证明真实不支持，可以使用
 $`\widehat d-u_{\ast}-\max_i u_i>\delta`$。要给某组实际权重出具支持证书，可以检查
@@ -469,15 +469,15 @@ $`\lVert \widehat m_{\ast}-\sum \alpha _i\widehat m_i\rVert +u_{\ast}+\sum \alph
 
 设两个候选报告分别使用互相独立的 $`N`$ 个标准正态观测，估计均值 0。记
 
-$$
+```math
 Z_{r,N}=\frac1{\sqrt N}\sum_{k=1}^N\varepsilon_{r,k}, \quad r=1,2.
-$$
+```
 
-对每个固定候选，$`Z_{r,N}`$ 对所有 $`N`$ 都精确服从 $`\mathcal N(0,1)`$，也满足 Lindeberg 条件。选择 $`\widehat r=\operatorname*{arg\,max}_r\lvert Z_{r,N}\rvert`$ 后，
+对每个固定候选，$`Z_{r,N}`$ 对所有 $`N`$ 都精确服从 $`\mathcal N(0,1)`$，也满足 Lindeberg 条件。选择 $`\widehat r=\mathrm{arg\,max}_r\lvert Z_{r,N}\rvert`$ 后，
 
-$$
+```math
 \mathbb P(|Z_{\widehat r,N}|\le z) =\{2\Phi(z)-1\}^2,\quad z\ge0. \qquad\text{(N1)}
-$$
+```
 
 这个分布不随 $`N`$ 变化且不是标准正态。普通双侧 $`1-a`$ 区间的选择后覆盖为 $`(1-a)^2`$。即使重新按选择后真实方差归一化，最大绝对值所诱导的形状也不会变成正态。
 
@@ -491,27 +491,27 @@ $$
 2. $`V_N=\sum _k \mathbb E[\xi _{N,k}^2\vert \mathcal G_N]>0`$ 几乎处处。
 3. 对每个 $`\varepsilon >0`$，
 
-$$
+```math
 L_N(\epsilon)=\frac1{V_N}\sum_k \mathbb E[\xi_{N,k}^2 1_{\{|\xi_{N,k}|>\epsilon\sqrt{V_N}\}}\mid\mathcal G_N] \xrightarrow{p}0. \qquad\text{(N2)}
-$$
+```
 
 4. 实际估计误差可以写成
 
-$$
+```math
 \widetilde\theta_N-\tau_{*,N} =\sum_k\xi_{N,k}+b_N+\Delta_N, \qquad \frac{b_N+\Delta_N}{\sqrt{V_N}}\xrightarrow{p}0. \qquad\text{(N3)}
-$$
+```
 
 那么
 
-$$
+```math
 \frac{\widetilde\theta_N-\tau_{*,N}}{\sqrt{V_N}} \Rightarrow N(0,1). \qquad\text{(N4)}
-$$
+```
 
 若另有 $`\widehat V_N>0`$（至少以趋于 1 的概率成立）且 $`\widehat V_N/V_N\xrightarrow{p}1`$，则
 
-$$
+```math
 \frac{\widetilde\theta_N-\tau_{*,N}}{\sqrt{\widehat V_N}} \Rightarrow N(0,1), \qquad\text{(N5)}
-$$
+```
 
 固定 $`a\in (0,1)`$ 的普通正态区间覆盖率趋于 $`1-a`$。
 
@@ -523,49 +523,49 @@ $$
 
 **第一步：单项方差消失。** 对任意 $`\varepsilon >0`$，
 
-$$
+```math
 q_{N,k} \le\epsilon^2+ \mathbb E[Z_{N,k}^2 1_{\{|Z_{N,k}|>\epsilon\}}\mid\mathcal G_N],
-$$
+```
 
 因此 $`\max_k q_{N,k}\le \varepsilon ^2+L_N(\varepsilon )`$。先令 $`N\to \infty`$ 再令 $`\varepsilon \downarrow 0`$，得到 $`\max_k q_{N,k}\xrightarrow{p}0`$。
 
 **第二步：条件特征函数的总余项消失。** 固定实数 $`t`$，令
 
-$$
+```math
 \phi_{N,k}(t) =\mathbb E[e^{itZ_{N,k}}\mid\mathcal G_N] =1-\frac{t^2}2q_{N,k}+d_{N,k}(t).
-$$
+```
 
 利用零均值、Taylor 余项以及全局界
 $`\vert e^{iu}-1-iu+u^2/2\vert \le u^2`$，在 $`\vert Z\vert \le \varepsilon`$ 与其补集上分别估计得
 
-$$
+```math
 \sum_k|d_{N,k}(t)| \le\frac{|t|^3\epsilon}{6} +t^2L_N(\epsilon). \qquad\text{(N6)}
-$$
+```
 
 先取足够小的 $`\varepsilon`$，再利用 (N2)，得到总余项趋于 0（依概率）。
 
 **第三步：乘积趋向高斯特征函数。** 设
 $`a_{N,k}=-t^2q_{N,k}/2+d_{N,k}(t)`$。前两步给出
 
-$$
+```math
 \sum_ka_{N,k}\xrightarrow{p}-t^2/2, \quad\max_k|a_{N,k}|\xrightarrow{p}0, \quad\sum_k|a_{N,k}|=O_p(1).
-$$
+```
 
 因而
 $`\sum _k\vert a_{N,k}\vert ^2\le \max_k\vert a_{N,k}\vert \sum _k\vert a_{N,k}\vert \xrightarrow{p}0`$。在所有 $`\vert a_{N,k}\vert \le 1/2`$ 的高概率事件上，复数对数展开满足
 $`\vert \log (1+a)-a\vert \le 2\vert a\vert ^2`$。条件独立性于是给出
 
-$$
+```math
 \mathbb E\left[e^{it\sum_kZ_{N,k}}\mid\mathcal G_N\right] =\prod_k\phi_{N,k}(t) \xrightarrow{p}e^{-t^2/2}. \qquad\text{(N7)}
-$$
+```
 
 **第四步：从条件特征函数到无条件分布。** (N7) 左端的模不超过 1，所以其依概率收敛蕴含到常数的 $`L^1`$ 收敛：将偏差按 $`\le \delta`$ 与 $`>\delta`$ 分开，有期望偏差至多 $`\delta+2\mathbb P(\text{偏差}>\delta)`$。取全期望，得到无条件特征函数趋于 $`e^{-t^2/2}`$。由特征函数连续性定理，$`\sum_k\xi_{N,k}/\sqrt{V_N}\Rightarrow\mathcal N(0,1)`$。
 
 **第五步：余项与学生化。** (N3) 和 Slutsky 定理给出 (N4)。$`\sqrt{V_N/\widehat V_N}\xrightarrow{p}1`$ 再次使用 Slutsky 得到 (N5)。令 $`z=\Phi ^{-1}(1-a/2)`$，因标准正态分布在 $`\pm z`$ 无原子，
 
-$$
+```math
 \mathbb P\left(\left|\frac{\widetilde\theta_N-\tau_{*,N}} {\sqrt{\widehat V_N}}\right|\le z\right) \longrightarrow\Phi(z)-\Phi(-z)=1-a.
-$$
+```
 
 证毕。
 
@@ -576,15 +576,15 @@ $$
 若存在事件 $`E_N`$，$`\mathbb P(E_N^c)\to 0`$，在该事件上
 $`\vert b_N\vert \le B_N`$、$`\vert \Delta _N\vert \le E_N^{rad}`$，且
 
-$$
+```math
 \frac{B_N+E_N^{\rm rad}}{\sqrt{V_N}}\xrightarrow{p}0,
-$$
+```
 
 则对任意 $`\varepsilon >0`$，
 
-$$
+```math
 \mathbb P(|b_N+\Delta_N|>\epsilon\sqrt{V_N}) \le\mathbb P(E_N^c)+ \mathbb P(B_N+E_N^{\rm rad}>\epsilon\sqrt{V_N})\to0.
-$$
+```
 
 这给出 (N3)。注意是相对于 **真实标准差**，而不是仅相对于一个可能极保守的 proxy 尺度。
 
@@ -594,15 +594,15 @@ $$
 
 对 atlas 的真实权重 $`w_{N,i}`$，设
 
-$$
+```math
 V_N=\sum_iw_{N,i}^2v_{N,i},\qquad \widehat V_N=\sum_iw_{N,i}^2\widehat v_{N,i}.
-$$
+```
 
 若每项估计非负，且
 
-$$
+```math
 \frac{\sum_iw_{N,i}^2|\widehat v_{N,i}-v_{N,i}|}{V_N} \xrightarrow{p}0, \qquad\text{(N8)}
-$$
+```
 
 则由三角不等式
 $`\vert \widehat V_N/V_N-1\vert \le \sum _iw_i^2\vert \widehat v_i-v_i\vert /V_N\xrightarrow{p}0`$。这是充分条件的完整证明。更强但容易陈述的条件是：对所有具有非零权重的正方差项，最大相对估计误差趋于零；真方差为零的项还需单独控制估计贡献。
@@ -614,15 +614,15 @@ $`\vert \widehat V_N/V_N-1\vert \le \sum _iw_i^2\vert \widehat v_i-v_i\vert /V_N
 若偏差和抽取误差不满足 (N3)，但以概率至少 $`1-\rho _N`$ 有
 $`\vert b_N\vert \le B_N`$、$`\vert \Delta _N\vert \le E_N^{rad}`$，且噪声中心部分满足上述 CLT 和方差一致性，则扩大区间
 
-$$
+```math
 \left[\widetilde\theta_N\pm \{z_{1-a/2}\sqrt{\widehat V_N}+B_N+E_N^{\rm rad}\}\right] \qquad\text{(N9)}
-$$
+```
 
 满足
 
-$$
+```math
 \liminf_N\mathbb P\{\tau_{*,N}\in I_N\} \ge1-a-\limsup_N\rho_N. \qquad\text{(N10)}
-$$
+```
 
 因为证书成立且噪声和绝对值不超过正态半径时，三角不等式保证覆盖。若 $`\rho _N\to 0`$，得到至少 $`1-a`$ 的渐近覆盖。一般**不等于** $`1-a`$：例如在零偏差下人为加入远大于标准差的有效上界，覆盖会趋于 1。
 

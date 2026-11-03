@@ -17,9 +17,9 @@
 
 令 C 为有限非空集合，E 为实赋范空间，m_i∈E，m_*∈E。定义
 
-$$
+```math
 \Delta_C=\{a\in\mathbb R^C:\ a_i\ge0\ (i\in C),\ \sum_{i\in C}a_i=1\},\qquad g(a)=\left\|m_{\ast}-\sum_{i\in C}a_im_i\right\|.
-$$
+```
 
 则存在 a⁰∈Δ_C，使得对每个 a∈Δ_C，g(a⁰)≤g(a)。因此原文定义的下确界是最小值。
 
@@ -39,15 +39,15 @@ $$
 
 原估计量为
 
-$$
+```math
 \widehat\theta_{\rm db}(a,J)=\sum_i a_iY_i+r_a^T\widehat\beta_J.
-$$
+```
 
 若 r_a=0，则第二项恒等于零，无需任何概率假设：
 
-$$
+```math
 \widehat\theta_{\rm db}(a,J)=\sum_i a_iY_i.
-$$
+```
 
 这个代数结论不需要正态性，也不需要 J 与源研究独立。概率假设只在给出分布、方差和置信区间时使用。
 
@@ -55,21 +55,21 @@ $$
 
 假设 C 有限非空，所有研究估计同一个实数 τ，且
 
-$$
-Y_i=\tau+\varepsilon_i,\quad E\varepsilon_i=0,\quad \operatorname{Cov}(\varepsilon_i,\varepsilon_j)=0\ (i\ne j),\quad v_i=\operatorname{Var}(\varepsilon_i)>0.
-$$
+```math
+Y_i=\tau+\varepsilon_i,\quad E\varepsilon_i=0,\quad \mathrm{Cov}(\varepsilon_i,\varepsilon_j)=0\ (i\ne j),\quad v_i=\mathrm{Var}(\varepsilon_i)>0.
+```
 
 对所有满足 ∑a_i=1 的权重，E∑a_iY_i=τ，Var(∑a_iY_i)=∑v_i a_i²。记
 
-$$
+```math
 S=\sum_i v_i^{-1}>0,\qquad w_i=\frac{v_i^{-1}}S.
-$$
+```
 
 显然 w_i>0 且 ∑w_i=1。对任意 ∑a_i=1，完成平方得到
 
-$$
+```math
 \begin{aligned} \sum_i v_i(a_i-w_i)^2 &=\sum_i v_i a_i^2-2\sum_i v_i a_iw_i+\sum_i v_iw_i^2\\ &=\sum_i v_i a_i^2-\frac2S\sum_i a_i+\frac1{S^2}\sum_i v_i^{-1}\\ &=\sum_i v_i a_i^2-\frac1S. \end{aligned}
-$$
+```
 
 左边非负，因此方差至少为 1/S；当且仅当所有 a_i=w_i 时取等号。这个证明同时覆盖有符号权重的仿射超平面，故当然也覆盖非负 simplex。
 
@@ -85,15 +85,15 @@ $$
 
 若进一步 ε_i 相互独立且 ε_i∼N(0,v_i)，则
 
-$$
+```math
 \widehat\theta_{\rm IV}=\sum_iw_iY_i\sim N(\tau,S^{-1}).
-$$
+```
 
 对 0<η<1，令 z_{1-η/2} 为标准正态分位数，则
 
-$$
+```math
 P\left(\tau\in\left[\widehat\theta_{\rm IV}\pm z_{1-\eta/2}/\sqrt S\right]\right)=1-\eta.
-$$
+```
 
 这是经典逆方差合成的正态区间。原稿有限样本集中界给出的半径是 √(2 log(2/η)/S)，与正态分位数半径不同；它是保守区间，不能直接称为与经典正态区间完全相同。
 
@@ -107,9 +107,9 @@ Algorithm 1 还保留设计兼容检查、候选构造、冲突检查和报告�
 
 令 X∈R^{n×d} 满列秩，x_*∈R^d，Y∼N(Xβ,σ²I_n)，σ≥0。对所有可测估计量 T(Y)，允许 E_β(T−x_*^Tβ)²=+∞，有
 
-$$
+```math
 \sup_{\beta\in\mathbb R^d} E_\beta(T-x_{\ast}^T\beta)^2 \ge \frac{e^{-1/2}}{16}\,\sigma^2 x_{\ast}^T(X^TX)^{-1}x_{\ast}.
-$$
+```
 
 对 T 取下确界即为原稿结论。
 
@@ -117,27 +117,27 @@ $$
 
 考虑两个有正密度 p_+、p_- 的分布 P_+、P_-，参数值 θ_+>θ_-，间距 Δ=θ_+−θ_->0。给定实值估计量 T，定义检验 ψ=+ 当 T≥(θ_++θ_-)/2，否则 ψ=−。若在 P_+ 下判断为 −，则 |T−θ_+|≥Δ/2；若在 P_- 下判断为 +，则 |T−θ_-|≥Δ/2。因此
 
-$$
+```math
 \max(R_+,R_-)\ge\frac{R_++R_-}2 \ge\frac{\Delta^2}8\{P_+(\psi=-)+P_-(\psi=+)\}.
-$$
+```
 
 对于任意检验，错误概率和至少为 ∫min(p_+,p_-)=1−TV(P_+,P_-)。令 ρ=∫√(p_+p_-)。Jensen 不等式给出
 
-$$
+```math
 \rho=E_+\exp\left[-\frac12\log\frac{p_+}{p_-}\right] \ge\exp[-\mathrm{KL}(P_+,P_-)/2].
-$$
+```
 
 另一方面，Cauchy–Schwarz 给出
 
-$$
+```math
 \begin{aligned} TV&=\tfrac12\int|\sqrt{p_+}-\sqrt{p_-}|(\sqrt{p_+}+\sqrt{p_-})\\ &\le\tfrac12\sqrt{(2-2\rho)(2+2\rho)}=\sqrt{1-\rho^2}. \end{aligned}
-$$
+```
 
 因 0≤ρ≤1，1−√(1−ρ²)=ρ²/(1+√(1−ρ²))≥ρ²/2。因此
 
-$$
+```math
 \max(R_+,R_-)\ge\frac{\Delta^2}{16}e^{-\mathrm{KL}(P_+,P_-)}.
-$$
+```
 
 高斯密度严格正，所用 KL 有限，因此上述步骤在下面的应用中均适用。
 
@@ -145,33 +145,33 @@ $$
 
 记 A=X^TX。满列秩保证 A 对称正定；于是 A^{-1} 对称正定。设
 
-$$
+```math
 v=A^{-1}x_{\ast},\qquad a=x_{\ast}^TA^{-1}x_{\ast}\ge0.
-$$
+```
 
 若 σ=0 或 a=0，右侧为零，结论由风险非负直接得到。以下设 σ>0、a>0。取 h=σ/2，定义
 
-$$
+```math
 \beta_+=hv/\sqrt a,\qquad\beta_-=-hv/\sqrt a.
-$$
+```
 
 目标值为 θ_±=±h√a，间距 Δ=2h√a=σ√a。由于 Av=x_*，
 
-$$
+```math
 v^TAv=v^Tx_{\ast}=a.
-$$
+```
 
 两正态分布的协方差相同，因此
 
-$$
+```math
 \mathrm{KL}(P_+,P_-) =\frac{\|X(\beta_+-\beta_-)\|^2}{2\sigma^2} =\frac{4h^2v^TX^TXv/a}{2\sigma^2} =\frac{2h^2}{\sigma^2}=\frac12.
-$$
+```
 
 其中相同协方差正态分布的 KL 公式也可直接由对数似然比展开验证：
 
-$$
+```math
 \log\frac{p_+(Y)}{p_-(Y)} =\frac{\|Y-X\beta_-\|^2-\|Y-X\beta_+\|^2}{2\sigma^2};
-$$
+```
 
 在 P_+ 下取期望，随机交叉项因 E_+(Y−Xβ_+)=0 消失，留下 ||X(β_+−β_-)||²/(2σ²)。
 
@@ -183,9 +183,9 @@ $$
 
 本条下界使用
 
-$$
-d_{\rm obs}=\operatorname{dist}(m_{\ast},S),\quad S=\{m_1,\ldots,m_N\},
-$$
+```math
+d_{\rm obs}=\mathrm{dist}(m_{\ast},S),\quad S=\{m_1,\ldots,m_N\},
+```
 
 即到实际观测机制点集的距离。Definition 3.1 使用的是到 conv(S) 的距离 d_conv。一般 d_conv≤d_obs，且可以 d_conv=0<d_obs。例如观测点为 {−1,1}、目标为 0，则目标位于凸包内，但其函数值对一般 Lipschitz 函数仍未被确定。局部仿射模型可以利用凸组合；任意 Lipschitz 函数类不可以。因此建议把原文两者分别命名，避免把两个不同模型的支持概念混在一起。
 
@@ -193,9 +193,9 @@ $$
 
 令 (M,dist) 为度量空间，S 为非空有限集合，L≥0，d=dist(m_*,S)>0。定义
 
-$$
-f_+(m)=L\operatorname{dist}(m,S),\qquad f_-(m)=-L\operatorname{dist}(m,S).
-$$
+```math
+f_+(m)=L\mathrm{dist}(m,S),\qquad f_-(m)=-L\mathrm{dist}(m,S).
+```
 
 距离函数是 1-Lipschitz：对任意 m,m'，由三角不等式对 s∈S 取下确界可得 dist(m,S)≤dist(m,m')+dist(m',S)，交换 m,m' 后得到 |dist(m,S)−dist(m',S)|≤dist(m,m')。所以 f_± 都是 L-Lipschitz。
 
@@ -205,15 +205,15 @@ $$
 
 设 T:R^N→R 为任意确定性估计量。相同全零数据产生相同数值 t=T(0)。由三角不等式，
 
-$$
+```math
 2Ld=|(t+Ld)-(t-Ld)|\le|t+Ld|+|t-Ld| \le2\max\{|t+Ld|,|t-Ld|\}.
-$$
+```
 
 故 max{|t−Ld|,|t+Ld|}≥Ld。两个函数均属于 F_L，因此
 
-$$
+```math
 \sup_{f\in F_L}|T(f(m_1),\ldots,f(m_N))-f(m_{\ast})|\ge Ld.
-$$
+```
 
 对 T 取下确界得更强下界 Ld，当然蕴含原稿 Ld/2。
 
@@ -221,15 +221,15 @@ $$
 
 若算法可使用与数据生成独立的内部随机种子 U，则两种世界下 T(0,U) 的分布完全相同。记这一随机输出为 Z。逐点恒等式
 
-$$
+```math
 \frac{(Z-Ld)^2+(Z+Ld)^2}{2}=Z^2+L^2d^2
-$$
+```
 
 给出
 
-$$
+```math
 \max\{E(Z-Ld)^2,E(Z+Ld)^2\} \ge\tfrac12\{E(Z-Ld)^2+E(Z+Ld)^2\}\ge L^2d^2.
-$$
+```
 
 若任一风险为无穷，下界立即成立；否则上述线性运算均合法。故最坏平方风险至少为 L²d²，更强于原稿 L²d²/16。若希望保留原稿的函数目标值 ±Ld/2，同一证明给出 L²d²/4，仍强于文稿常数。
 

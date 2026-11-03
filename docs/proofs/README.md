@@ -28,9 +28,9 @@ SHA-256：`4f6bcb8ebf0eba8a6a8e0c2d9e5ae9a1e5aff80cbb92ecd24f754153c730501f`。
 
 令 $`B=(X_J^\top W_JX_J)^{-1}X_J^\top W_J`$，$`h=B^\top r`$。完整曲率偏差为
 
-$$
+```math
 b_{\mathrm{curv}}=\sum_{i\in C}\alpha_i\zeta_i+\sum_{j\in J}h_j\zeta_j-\zeta_{\ast}.
-$$
+```
 
 原稿只约束了第一项与目标余项之差。统计证明第 5 节给出无噪声反例：原半径为零，但校准集曲率仍产生非零偏差。因此原 Corollary 5.1 不能按原样证明。
 
@@ -38,9 +38,9 @@ $$
 
 实际输入应区分理想研究记录 $`Y_i^0`$ 与抽取扰动 $`\delta_i`$。使用实际校准影响权重 $`\widehat h`$，有效抽取半径可取
 
-$$
+```math
 B_{\mathrm{ext}}=\widehat L\!\left(u_{\ast}+\sum_C\alpha_i u_i+\sum_J|\widehat h_j|u_j\right) +\sum_C\alpha_i v_i^{\mathrm{ext}}+\sum_J|\widehat h_j|v_j^{\mathrm{ext}}.
-$$
+```
 
 这要求实际抽取矩阵可逆、特征再现恒等式成立、各证书同时有效，并保持研究误差在所用条件信息下的统计性质。参数范数、曲率和噪声参数证书的失败概率都应进入总预算。详见统计证明第 6 节。
 
@@ -80,9 +80,9 @@ $$
 
 Lean 对满足条件的序列证明
 
-$$
+```math
 F(S_B)\ge (1-e^{-\gamma})F(T)-2B\varepsilon,\qquad |T|\le B.
-$$
+```
 
 这是用 $`\sum_{j=0}^{B-1}q^j\le B`$ 得到的界；当 $`0<\gamma\le1`$ 时，它强于原稿的误差项 $`2B\varepsilon/\gamma`$。本轮已证明有限候选最优集存在，并将估计贪心选择的数学构造接入该界；统一误差事件的失败概率也已传递到最终保证。单调性、弱次模性及估计误差证书仍是必须检验的模型前提。
 

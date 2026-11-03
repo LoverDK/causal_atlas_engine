@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-03T15:12:30.047980+08:00",
+  "verified_at": "2026-11-03T15:16:36.898413+08:00",
   "scope": "All six Markdown documents; local math-aware Markdown rendering with KaTeX 0.16.22 in headless Microsoft Edge. This is not a claim about every third-party Markdown viewer.",
   "viewport": {
     "width": 1440,
@@ -56,7 +56,7 @@
       "maxFormulaHeight": 147.828125,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "9cb79b28e5c3d17d0938eee3182ce854b6871412bb6f94539ee397cb5fb7ac3c"
+      "source_sha256": "0cef1fb11951adc28957440faa384eba44d180a4bd251e0326447ce09cca18f2"
     },
     {
       "file": "docs/proofs/02-support-and-lower-bounds.md",
@@ -77,7 +77,7 @@
       "maxFormulaHeight": 169.59375,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "c1fc928b94ed8e28da4d218860438af5db5e35dfb8089e25cda2ed91eef1cba9"
+      "source_sha256": "dbfdf6df07f62772b8a1ab3e804b807c3232954097947d7e8175f323565abb38"
     },
     {
       "file": "docs/proofs/03-bridge-selection.md",
@@ -90,7 +90,7 @@
       "maxFormulaHeight": 104.625,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "6513ac9aaa074113148e3a01ed884dd13b77a484eb778f9791437d13d0d18f60"
+      "source_sha256": "c1abf3e3d47f4c554834bb3f3c3f188f84892e4de2221d648e6230de7c347f21"
     },
     {
       "file": "docs/proofs/04-formal-connections.md",
@@ -103,7 +103,7 @@
       "maxFormulaHeight": 75.828125,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "b31476798e7183ae6833ea0aa735ae0197e21e0bdf0bebb8f05976bc26cf584b"
+      "source_sha256": "d3324194e37d1466f77f02aa4106b492a482e2f16b5373a550548a38b90b3d92"
     },
     {
       "file": "docs/proofs/README.md",
@@ -131,7 +131,7 @@
       "maxFormulaHeight": 76.59375,
       "pageOverflow": false,
       "formulaOverflows": 0,
-      "source_sha256": "4d9ec6922c3f5df79a642f3ae6e5887f24fdcb1cf90a1119dd1adc76ebfd5ba8"
+      "source_sha256": "7562b3e3ca26ac0b14feb350d8d9b1079e821e11dc1f01d3a976611c5a3722bb"
     }
   ]
 }
