@@ -1,6 +1,6 @@
 {
-  "verified_at": "2026-11-03T15:16:36.898413+08:00",
-  "scope": "All six Markdown documents; local math-aware Markdown rendering with KaTeX 0.16.22 in headless Microsoft Edge. This is not a claim about every third-party Markdown viewer.",
+  "verified_at": "2026-11-03T15:18:40.637222+08:00",
+  "scope": "All six Markdown documents: local KaTeX 0.16.22 preview and actual GitHub native MathML rendering in Microsoft Edge. Exact tested GitHub commit and per-document counts are recorded separately.",
   "viewport": {
     "width": 1440,
     "height": 1080
@@ -19,7 +19,10 @@
     "Use the protected dollar/backtick inline delimiters documented by GitHub.",
     "Replace tag macros with ordinary math text equation labels to avoid unsupported native MathML mlabeledtr layouts observed on the actual GitHub page.",
     "Prevent raw vertical bars from splitting Markdown table cells.",
-    "Retain code formatting for actual Lean declarations, commands, versions and file paths."
+    "Retain code formatting for actual Lean declarations, commands, versions and file paths.",
+    "Use fenced math blocks instead of dollar display delimiters; GitHub API testing showed bracket delimiters render as ordinary text.",
+    "Use supported upright function-name notation in place of restricted operator macros.",
+    "Move block formulas outside nested lists."
   ],
   "files": [
     {
@@ -133,5 +136,15 @@
       "formulaOverflows": 0,
       "source_sha256": "7562b3e3ca26ac0b14feb350d8d9b1079e821e11dc1f01d3a976611c5a3722bb"
     }
-  ]
+  ],
+  "github_native": {
+    "tested_commit": "ee73f8b4232286eae741ef6b285512f1c5be03e0",
+    "formula_count": 552,
+    "all_formula_nodes_rendered": true,
+    "report": "github-rendering.json",
+    "manual_visual_review": [
+      "Section 5.1C-R, including C1-C3: horizontal equations, correct subscripts, no fallback source.",
+      "Longest multiline expression E9 and neighboring E6-E11: normal aligned layout."
+    ]
+  }
 }
