@@ -1,0 +1,150 @@
+{
+  "verified_at": "2026-11-03T15:18:40.637222+08:00",
+  "scope": "All six Markdown documents: local KaTeX 0.16.22 preview and actual GitHub native MathML rendering in Microsoft Edge. Exact tested GitHub commit and per-document counts are recorded separately.",
+  "viewport": {
+    "width": 1440,
+    "height": 1080
+  },
+  "document_count": 6,
+  "formula_count": 552,
+  "display_formula_count": 135,
+  "manual_visual_review": [
+    "Statistical proof section 5.1C-R: target subscripts, full curvature identity, interval and numbered equations render horizontally without fallback code.",
+    "New connections document: randomized risk and studentization formulas render correctly."
+  ],
+  "changes": [
+    "Use braced LaTeX target-star notation without raw Markdown asterisks.",
+    "Keep each display formula body on one source line; aligned environments retain explicit row separators.",
+    "Convert 267 mathematical inline code spans to mathematical notation.",
+    "Use the protected dollar/backtick inline delimiters documented by GitHub.",
+    "Replace tag macros with ordinary math text equation labels to avoid unsupported native MathML mlabeledtr layouts observed on the actual GitHub page.",
+    "Prevent raw vertical bars from splitting Markdown table cells.",
+    "Retain code formatting for actual Lean declarations, commands, versions and file paths.",
+    "Use fenced math blocks instead of dollar display delimiters; GitHub API testing showed bracket delimiters render as ordinary text.",
+    "Use supported upright function-name notation in place of restricted operator macros.",
+    "Move block formulas outside nested lists."
+  ],
+  "files": [
+    {
+      "file": "README.md",
+      "formulas": 0,
+      "errors": [],
+      "tables": [],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 0,
+      "maxFormulaHeight": 0,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "d4e500835e191bdc01253842549dbdecdd41782c690fc40525b5b4f48698a481"
+    },
+    {
+      "file": "docs/proofs/01-statistical-proofs.md",
+      "formulas": 336,
+      "errors": [],
+      "tables": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 69,
+      "maxFormulaHeight": 147.828125,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "0cef1fb11951adc28957440faa384eba44d180a4bd251e0326447ce09cca18f2"
+    },
+    {
+      "file": "docs/proofs/02-support-and-lower-bounds.md",
+      "formulas": 24,
+      "errors": [],
+      "tables": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 24,
+      "maxFormulaHeight": 169.59375,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "dbfdf6df07f62772b8a1ab3e804b807c3232954097947d7e8175f323565abb38"
+    },
+    {
+      "file": "docs/proofs/03-bridge-selection.md",
+      "formulas": 74,
+      "errors": [],
+      "tables": [],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 16,
+      "maxFormulaHeight": 104.625,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "c1abf3e3d47f4c554834bb3f3c3f188f84892e4de2221d648e6230de7c347f21"
+    },
+    {
+      "file": "docs/proofs/04-formal-connections.md",
+      "formulas": 103,
+      "errors": [],
+      "tables": [],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 23,
+      "maxFormulaHeight": 75.828125,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "d3324194e37d1466f77f02aa4106b492a482e2f16b5373a550548a38b90b3d92"
+    },
+    {
+      "file": "docs/proofs/README.md",
+      "formulas": 15,
+      "errors": [],
+      "tables": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "mathErrors": 0,
+      "unrenderedCode": 0,
+      "displayCount": 3,
+      "maxFormulaHeight": 76.59375,
+      "pageOverflow": false,
+      "formulaOverflows": 0,
+      "source_sha256": "7562b3e3ca26ac0b14feb350d8d9b1079e821e11dc1f01d3a976611c5a3722bb"
+    }
+  ],
+  "github_native": {
+    "tested_commit": "ee73f8b4232286eae741ef6b285512f1c5be03e0",
+    "formula_count": 552,
+    "all_formula_nodes_rendered": true,
+    "report": "github-rendering.json",
+    "manual_visual_review": [
+      "Section 5.1C-R, including C1-C3: horizontal equations, correct subscripts, no fallback source.",
+      "Longest multiline expression E9 and neighboring E6-E11: normal aligned layout."
+    ]
+  }
+}

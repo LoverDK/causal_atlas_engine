@@ -1,0 +1,101 @@
+{
+  "commit": "ee73f8b4232286eae741ef6b285512f1c5be03e0",
+  "browser": "156.0.4314.58",
+  "results": [
+    {
+      "file": "README.md",
+      "status": 200,
+      "expected": 0,
+      "rendered": 0,
+      "display": 0,
+      "inline": 0,
+      "mathErrors": 0,
+      "unrendered": [],
+      "unsupportedLabelRows": 0,
+      "rawMathText": [],
+      "maxDisplayHeight": 0
+    },
+    {
+      "file": "docs/proofs/01-statistical-proofs.md",
+      "status": 200,
+      "expected": 336,
+      "rendered": 336,
+      "display": 69,
+      "inline": 267,
+      "mathErrors": 0,
+      "unrendered": [],
+      "unsupportedLabelRows": 0,
+      "rawMathText": [],
+      "maxDisplayHeight": 150.8125,
+      "tallest": [
+        {
+          "i": 40,
+          "h": 150.8125,
+          "text": "(∑Cαixi+∑Jh^jxj−x∗)⊤β={∑Cαi(xi−x^i)+∑Jh^j(xj−x^j)+(x^∗−x∗)}⊤β,(E9)"
+        },
+        {
+          "i": 35,
+          "h": 128.6875,
+          "text": "Bext=L^(u∗+∑i∈Cαiui+∑j∈J|h^j|uj)+∑i∈Cαiviext+∑j∈J|h^j|vjext.(E4)"
+        },
+        {
+          "i": 62,
+          "h": 100.828125,
+          "text": "P(|θ~N−τ∗,NV^N|≤z)⟶Φ(z)−Φ(−z)=1−a."
+        }
+      ]
+    },
+    {
+      "file": "docs/proofs/02-support-and-lower-bounds.md",
+      "status": 200,
+      "expected": 24,
+      "rendered": 24,
+      "display": 24,
+      "inline": 0,
+      "mathErrors": 0,
+      "unrendered": [],
+      "unsupportedLabelRows": 0,
+      "rawMathText": [],
+      "maxDisplayHeight": 159.15625
+    },
+    {
+      "file": "docs/proofs/03-bridge-selection.md",
+      "status": 200,
+      "expected": 74,
+      "rendered": 74,
+      "display": 16,
+      "inline": 58,
+      "mathErrors": 0,
+      "unrendered": [],
+      "unsupportedLabelRows": 0,
+      "rawMathText": [],
+      "maxDisplayHeight": 91.4375
+    },
+    {
+      "file": "docs/proofs/04-formal-connections.md",
+      "status": 200,
+      "expected": 103,
+      "rendered": 103,
+      "display": 23,
+      "inline": 80,
+      "mathErrors": 0,
+      "unrendered": [],
+      "unsupportedLabelRows": 0,
+      "rawMathText": [],
+      "maxDisplayHeight": 71
+    },
+    {
+      "file": "docs/proofs/README.md",
+      "status": 200,
+      "expected": 15,
+      "rendered": 15,
+      "display": 3,
+      "inline": 12,
+      "mathErrors": 0,
+      "unrendered": [],
+      "unsupportedLabelRows": 0,
+      "rawMathText": [],
+      "maxDisplayHeight": 71
+    }
+  ]
+}

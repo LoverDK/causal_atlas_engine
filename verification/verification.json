@@ -1,0 +1,298 @@
+{
+  "verified_at": "2026-11-03T15:00:24.529341+08:00",
+  "lean_version": "Lean (version 4.34.0-rc1, x86_64-w64-windows-gnu, commit 3447a668783dbce1a8fdb97101dd067687b2b418, Release)",
+  "theorem_count": 90,
+  "theorems": [
+    "Atlas.affine_signal_reproduction",
+    "Atlas.weighted_error_bound",
+    "Atlas.interval_inflation",
+    "Atlas.full_error_decomposition",
+    "Atlas.Asymptotics.fixed_iid_clt",
+    "Atlas.Asymptotics.add_negligible",
+    "Atlas.Asymptotics.mul_consistent_factor",
+    "Atlas.Asymptotics.continuousAt_inMeasure_const",
+    "Atlas.Asymptotics.inverse_sqrt_consistent",
+    "Atlas.Asymptotics.studentized_limit",
+    "Atlas.Asymptotics.dominated_inMeasure_const",
+    "Atlas.Asymptotics.weighted_variance_relative_bound",
+    "Atlas.Asymptotics.variance_consistent_of_weighted_errors",
+    "CausalAtlas.estimatedGreedy_step",
+    "CausalAtlas.contraction_bound",
+    "CausalAtlas.geometric_le_exp",
+    "CausalAtlas.weakSubmodular_progress",
+    "CausalAtlas.progress_to_contraction",
+    "CausalAtlas.bridge_bound_of_progress",
+    "CausalAtlas.weakSubmodular_greedy_bound",
+    "CausalAtlas.BridgeAlgorithm.finite_argmax_exists",
+    "CausalAtlas.BridgeAlgorithm.finiteArgmax_mem",
+    "CausalAtlas.BridgeAlgorithm.finiteArgmax_max",
+    "CausalAtlas.BridgeAlgorithm.nextChoice_max",
+    "CausalAtlas.BridgeAlgorithm.nextChoice_mem",
+    "CausalAtlas.BridgeAlgorithm.nextChoice_approximate",
+    "CausalAtlas.BridgeAlgorithm.greedySets_zero",
+    "CausalAtlas.BridgeAlgorithm.greedySets_succ",
+    "CausalAtlas.BridgeAlgorithm.constructed_greedy_bound",
+    "CausalAtlas.BridgeAlgorithm.greedySets_subset",
+    "CausalAtlas.BridgeAlgorithm.greedySets_card_le",
+    "CausalAtlas.BridgeAlgorithm.budget_optimum_exists",
+    "CausalAtlas.BridgeAlgorithm.constructed_greedy_failure_le",
+    "Atlas.weighted_expectation",
+    "Atlas.weighted_unbiased",
+    "Atlas.weighted_subgaussian",
+    "Atlas.subgaussian_two_sided",
+    "Atlas.weighted_variance",
+    "Atlas.Selection.selected_failure_subset",
+    "Atlas.Selection.family_failure_subset",
+    "Atlas.Selection.conflict_subset_failure",
+    "Atlas.Selection.family_failure_le",
+    "Atlas.Selection.selected_failure_le",
+    "Atlas.Selection.conflict_probability_le",
+    "Atlas.Selection.simultaneous_coverage",
+    "Atlas.Confidence.radius_calibration",
+    "Atlas.Confidence.confidence_tail_positive",
+    "Atlas.Confidence.confidence_tail_zero",
+    "Atlas.Confidence.confidence_tail",
+    "Atlas.Confidence.inflated_failure_subset",
+    "Atlas.Confidence.certified_interval_failure_le",
+    "Atlas.Confidence.family_certified_interval_failure_le",
+    "Atlas.Confidence.selected_certified_interval_failure_le",
+    "Atlas.Confidence.complete_remainder_bound",
+    "Atlas.Confidence.weighted_complete_interval_failure_le",
+    "Atlas.Extraction.feature_signal_error",
+    "Atlas.Extraction.record_extraction_error",
+    "Atlas.Extraction.weighted_extraction_error",
+    "Atlas.Extraction.observed_design_decomposition",
+    "Atlas.Extraction.full_extraction_certificate",
+    "Atlas.Extraction.signal_reproduction_of_vector",
+    "Atlas.Extraction.weighted_feature_perturbation_norm",
+    "Atlas.Extraction.support_residual_perturbation_norm",
+    "Atlas.Extraction.support_residual_signal_error",
+    "Atlas.InverseVariance.scalar_square_expansion",
+    "Atlas.InverseVariance.precisionSum_pos",
+    "Atlas.InverseVariance.weight_pos",
+    "Atlas.InverseVariance.weight_sum",
+    "Atlas.InverseVariance.completion_square",
+    "Atlas.InverseVariance.objective_weight",
+    "Atlas.InverseVariance.objective_minimal",
+    "Atlas.InverseVariance.objective_eq_iff",
+    "CausalAtlas.two_point_absolute",
+    "CausalAtlas.two_point_square_identity",
+    "CausalAtlas.gapFunction_lipschitz",
+    "CausalAtlas.neg_gapFunction_lipschitz",
+    "CausalAtlas.gapFunction_eq_zero",
+    "CausalAtlas.unsupported_target_lower_bound",
+    "Atlas.Regression.calibration_left_inverse",
+    "Atlas.Regression.calibration_weights_reproduce",
+    "Atlas.Regression.combined_features_reproduce",
+    "Atlas.Regression.calibration_prediction_eq_weights",
+    "Atlas.Regression.combined_signal_reproduce",
+    "Atlas.Regression.dotProduct_expectation",
+    "Atlas.Regression.integrable_dotProduct",
+    "Atlas.Regression.calibrated_estimator_unbiased",
+    "Atlas.Risk.randomized_two_point_risk",
+    "Atlas.Risk.randomized_unsupported_target_lower_bound",
+    "CausalAtlas.supportObjective_continuous",
+    "CausalAtlas.support_minimizer_exists"
+  ],
+  "kernel_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Algebra.olean",
+        "Atlas\\Algebra.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Asymptotics.olean",
+        "Atlas\\Asymptotics.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Bridge.olean",
+        "Atlas\\Bridge.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\BridgeAlgorithm.olean",
+        "Atlas\\BridgeAlgorithm.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Estimation.olean",
+        "Atlas\\Estimation.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Selection.olean",
+        "Atlas\\Selection.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Confidence.olean",
+        "Atlas\\Confidence.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Extraction.olean",
+        "Atlas\\Extraction.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\InverseVariance.olean",
+        "Atlas\\InverseVariance.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\LowerBounds.olean",
+        "Atlas\\LowerBounds.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Regression.olean",
+        "Atlas\\Regression.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Risk.olean",
+        "Atlas\\Risk.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake\\build\\lib\\lean\\Atlas\\Support.olean",
+        "Atlas\\Support.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        ".lake/build/lib/lean/Atlas.olean",
+        "Atlas.lean"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomAudit.lean"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "Atlas/Algebra.lean": "92bb9673a3f008e07e96552c7687a11231bfe8a1ce567939e40055e603fff254",
+    "Atlas/Asymptotics.lean": "4cc2f42b82ec36482d140357791abce4deb4bfc8b758039743c3aea79b8bc58f",
+    "Atlas/Bridge.lean": "c34b00cc040215b3fc166fc57c4462f47308eaaa6234621f805e089373d2ed78",
+    "Atlas/BridgeAlgorithm.lean": "f8976fb6573ad0c79b4d3c8634cde995a6026eb8a7511fbbd0ba8585542a9fe8",
+    "Atlas/Estimation.lean": "71d33b8d682deae81e6f92d25edcbd0bc79ca0891dbf81d07be6d5292be70885",
+    "Atlas/Selection.lean": "0980e4ce66433d1e52674770de2ff3b413a6464154aff5e57dfec9b46b9eeb1d",
+    "Atlas/Confidence.lean": "fd7e94fcf90c07f78ad20d6f88e9e1b055176424d28a179be6ebf9f0216129ec",
+    "Atlas/Extraction.lean": "3c80daa4e58168dcb4455a819ca789c1a7cad5e75cac7c2cbcb7e4f06fa2c724",
+    "Atlas/InverseVariance.lean": "fb84eeca7b3b0152efe17e745114435008cc183516125c002e82affe932dde8d",
+    "Atlas/LowerBounds.lean": "cf0a1063e21ea35cd7d79ec3e154cd244e5ed5899c9f640ac2f5f302eccf267f",
+    "Atlas/Regression.lean": "8ac9af8791a11aac4b8865d95143637d0c504d8dc4896c5e2d0647a365787e6d",
+    "Atlas/Risk.lean": "f52baf1862e161cda24bb4715229ac68313882ba04144b0cd99c794868539add",
+    "Atlas/Support.lean": "16feb077c1b9ca50d456c12983fb7552427f95abe1adb9cc68aac84f09cb2ca1",
+    "Atlas.lean": "09007d082358c56dbf440fa00d2ad55d005741e0556d22ab046a481be00edc76",
+    "AxiomAudit.lean": "09aca0456f4e5348b005e3741bfe028341a7b02816eec66f3d0c0d0ee28fe36d",
+    "lakefile.lean": "4bf9e0555bd234d920128022a3150e19a6933c28a43605460ed304b2d69e8c35",
+    "lake-manifest.json": "8de571983d0d4a858123ea0328b489d31b230ce43eda9cac7a063fa4436881d7",
+    "lean-toolchain": "cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf",
+    "verify.py": "dadc7555dc8c7dda703b9316d65e51341ed07ca02a4dc0d56ad3f1223a70e34f"
+  },
+  "scope": "Only the exact Lean statements listed here are verified. See docs/proofs/README.md for manuscript coverage and remaining gaps."
+}
